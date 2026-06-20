@@ -16,11 +16,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -36,20 +42,20 @@ body {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 /* ---- TYPOGRAPHY ---- */
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 800;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -84,11 +90,15 @@ h3 {
 .btn-primary {
   background: var(--electric-teal);
   color: var(--deep-navy);
-  padding: 18px 32px;
+  padding: 16px 24px;
   border-radius: 12px;
   text-align: center;
   width: 100%;
   max-width: 420px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary:hover {
@@ -133,7 +143,7 @@ h3 {
    ============================================ */
 
 .hero {
-  padding: 48px 0 56px;
+  padding: 32px 0 40px;
   position: relative;
 }
 
@@ -156,15 +166,15 @@ h3 {
 
 .hero-sub {
   color: var(--muted-sand);
-  font-size: 1rem;
-  margin-bottom: 28px;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
   max-width: 520px;
 }
 
 .vsl-wrapper {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto 28px;
+  max-width: 100%;
+  margin: 0 auto 24px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 24px rgba(0, 212, 170, 0.1);
@@ -250,7 +260,7 @@ h3 {
    ============================================ */
 
 .pain {
-  padding: 56px 0;
+  padding: 40px 0;
   background: var(--slate-blue);
 }
 
@@ -262,8 +272,8 @@ h3 {
   background: rgba(0,0,0,0.2);
   border-left: 4px solid var(--electric-teal);
   border-radius: 0 12px 12px 0;
-  padding: 24px;
-  margin: 24px 0;
+  padding: 20px;
+  margin: 20px 0;
 }
 
 .pain-card p {
@@ -309,7 +319,7 @@ h3 {
    ============================================ */
 
 .mechanism {
-  padding: 56px 0;
+  padding: 40px 0;
 }
 
 .mechanism-intro {
@@ -400,7 +410,7 @@ h3 {
    ============================================ */
 
 .solution {
-  padding: 56px 0;
+  padding: 40px 0;
   background: var(--slate-blue);
 }
 
@@ -453,7 +463,7 @@ h3 {
    ============================================ */
 
 .proof {
-  padding: 56px 0;
+  padding: 40px 0;
 }
 
 .testimonial-card {
@@ -534,7 +544,7 @@ h3 {
    ============================================ */
 
 .offer {
-  padding: 56px 0;
+  padding: 40px 0;
   background: var(--slate-blue);
   text-align: center;
 }
@@ -543,7 +553,7 @@ h3 {
   background: var(--deep-navy);
   border: 2px solid rgba(0,212,170,0.2);
   border-radius: 20px;
-  padding: 40px 24px;
+  padding: 32px 20px;
   max-width: 440px;
   margin: 0 auto;
 }
@@ -582,7 +592,7 @@ h3 {
    ============================================ */
 
 .guarantee {
-  padding: 56px 0;
+  padding: 40px 0;
 }
 
 .guarantee-box {
@@ -611,13 +621,13 @@ h3 {
    ============================================ */
 
 .final-cta {
-  padding: 64px 0;
+  padding: 40px 0;
   background: linear-gradient(180deg, var(--slate-blue) 0%, var(--deep-navy) 100%);
   text-align: center;
 }
 
 .final-cta h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 12px;
 }
 
@@ -647,6 +657,7 @@ h3 {
 
 .footer {
   padding: 32px 0;
+  padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid rgba(155, 142, 126, 0.15);
   text-align: center;
 }
@@ -700,6 +711,10 @@ h3 {
 
   .hero-sub {
     font-size: 1.1rem;
+  }
+
+  .vsl-wrapper {
+    max-width: 480px;
   }
 
   /* Pain */
